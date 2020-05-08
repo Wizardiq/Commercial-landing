@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/Wizard071/Landing-page#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
-    "gulp-less": "^4.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0"
   }

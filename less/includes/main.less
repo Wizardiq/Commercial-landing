@@ -18,11 +18,10 @@
             align-items: baseline;
         }
     }
-    .info-left {
-        display: flex;
-        flex-direction: column;
-        padding-right: 30px;
-    }
+}
+.info-left {
+    display: flex;
+    flex-direction: column;
 }
 .info-left__title {
     width: 330px;
@@ -31,6 +30,9 @@
     padding-bottom: 45px;
     @media(max-width: 768px){
         width: 100%;
+    }
+    @media(max-width: 425px){
+        text-align: center;
     }
     &-inside {
         font-size: 25px;
@@ -53,51 +55,64 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 295px;
+    width: 310px;
     padding-bottom: 40px;
     line-height: 1.3;
-    & img {
-        padding-right: 15px;
+    @media(max-width: 425px){
+        justify-content: center;
+    } 
+}
+.info-left__text {
+    width: 230px;
+    padding-left: 20px;
+    &-about {
+        font-family: RobotoBlack, sans-serif;
     }
-    .info-left__text {
-        &-about {
-            font-family: RobotoBlack, sans-serif;
-        }
-        &-tablets {
-            border-bottom: 3px solid #ff6b00 ; 
-        }
-        &-item {
-            font-family: RobotoBlack, sans-serif;
-        }
-        &-gel {
-            border-bottom: 3px solid #a8ca3f ; 
-        }
-        &-repair {
-            font-family: RobotoBlack, sans-serif;
-        }
-        &-protect {
-            font-family: RobotoBlack, sans-serif;
-        }
-    }   
+    &-tablets {
+        border-bottom: 3px solid #ff6b00 ; 
+    }
+    &-item {
+        font-family: RobotoBlack, sans-serif;
+    }
+    &-gel {
+        border-bottom: 3px solid #a8ca3f ; 
+    }
+    &-repair {
+        font-family: RobotoBlack, sans-serif;
+    }
+    &-protect {
+        font-family: RobotoBlack, sans-serif;
+    }
+} 
+.info-left__logo-sm {
+    background-color: #a7c93d;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    border: 6px solid #e8edc9;
 }
 
-.info-right {
-    .info__delivery {
-        display: inline-block;
-        text-align: center;
-        padding: 13px;
-        border-bottom: 7px solid #a8ca3f;
-        border-left: 6px solid #a8ca3f;
-        border-right: 6px solid #a8ca3f;
-        border-radius: 15px;
-        border-top-left-radius: initial;
-        border-top-right-radius: initial;
-        position: absolute;
-        background: #f3f9ff;
-        padding-top: 0;
-        top: -6px;
-        left: 21%;
-    }
+
+.info__delivery {
+    display: inline-block;
+    text-align: center;
+    padding: 13px;
+    border-bottom: 7px solid #a8ca3f;
+    border-left: 6px solid #a8ca3f;
+    border-right: 6px solid #a8ca3f;
+    border-radius: 15px;
+    border-top-left-radius: initial;
+    border-top-right-radius: initial;
+    position: absolute;
+    background: #f3f9ff;
+    padding-top: 0;
+    top: -6px;
+    left: 21%;
 }
 .order {
     position: relative;
@@ -112,68 +127,12 @@
         font-family: RobotoMedium, sans-serif;
         text-align: center;
         line-height: 1.3;
-        span {
-            color: #fd7836;
-            text-align: center;
-        }
     }
-    &-price {
-        display: flex;
-        justify-content: space-around;
-        padding-bottom: 15px;
-        &__old-price {
-            &-title {
-                font-size: 14px;
-                padding-bottom: 16px;
-            }
-            &-money {
-                font-family: RobotoLight, sans-serif;
-                font-size: 32px;
-                position: relative;
-                &:before {
-                    border-bottom: 1px solid red;
-                    position: absolute;
-                    content: "";
-                    width: 100%;
-                    transform: rotate(-19deg);
-                    height: 43%;
-                }
-                &:after {
-                    border-bottom: 1px solid red;
-                    position: absolute;
-                    content: "";
-                    width: 94%;
-                    transform: rotate(-160deg);
-                    height: 51%;
-                    bottom: 0;
-                    left: 0;
-                }
-                img {
-                    vertical-align: top;
-                }
-            }
-        }
-        &__new-price {
-            &-title {
-                font-size: 14px;
-                font-weight: bold;
-                padding-bottom: 10px;
-            }
-            &-money {
-                font-family: RobotoBlack, sans-serif;
-                font-size: 34px;
-                position: relative;
-                padding: 7px 12px;
-                background-color: #ffcb02;
-                width: fit-content;
-                border-radius: 10px;
-                img {
-                    vertical-align: inherit;
-                }
-            }
-        }
+    &__date{
+        color: #fd7836;
+        text-align: center;
     }
-    img.order-price_redirected {
+    &-price_redirected {
         position: absolute;
         top: 32%;
         left: 95%;
@@ -235,27 +194,83 @@
         margin-bottom: 20px;
         width: fit-content;
         box-shadow: 0px 0px 0px 5px #ffc002;
-       span {
-           font-size: 18px;
-       }
     }
-    &__remain {
-        font-family: RobotoMedium, sans-serif;
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 17px;
-        span {
-            color: #b1ca61;
+}
+.order-btn__text{
+    font-size: 18px;
+}
+.order__remain {
+    font-family: RobotoMedium, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 17px;
+    &-number{
+        color: #b1ca61;
+    }
+}
+.order__data {
+    background-color: #eef2f7;
+    color: #6f6f70;
+    font-size: 14px;
+    padding: 13px 25px;
+    border-radius: 0 0 8px 8px;
+    &-secur{
+        padding-left: 10px;
+    }
+}
+.order-price {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    &__old-price {
+        &-title {
+            font-size: 14px;
+            padding-bottom: 16px;
+        }
+        &-money {
+            font-family: RobotoLight, sans-serif;
+            font-size: 32px;
+            position: relative;
+            &:before {
+                border-bottom: 1px solid red;
+                position: absolute;
+                content: "";
+                width: 100%;
+                transform: rotate(-19deg);
+                height: 43%;
+            }
+            &:after {
+                border-bottom: 1px solid red;
+                position: absolute;
+                content: "";
+                width: 94%;
+                transform: rotate(-160deg);
+                height: 51%;
+                bottom: 0;
+                left: 0;
+            }
+            img {
+                vertical-align: top;
+            }
         }
     }
-    &__data {
-        background-color: #eef2f7;
-        color: #6f6f70;
-        font-size: 14px;
-        padding: 13px 25px;
-        border-radius: 0 0 8px 8px;
-        span {
-            padding-left: 10px;
+    &__new-price {
+        &-title {
+            font-size: 14px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        &-money {
+            font-family: RobotoBlack, sans-serif;
+            font-size: 34px;
+            position: relative;
+            padding: 7px 12px;
+            background-color: #ffcb02;
+            width: fit-content;
+            border-radius: 10px;
+            img {
+                vertical-align: inherit;
+            }
         }
     }
 }

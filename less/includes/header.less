@@ -1,37 +1,40 @@
 .header__medicine {
     display: flex;
     justify-content: flex-end;
-    .medicine-logo {
-        padding-top: 10px;
-        padding-right: 85px;
-        & span {
-            padding-left: 15px;
-            font-family: RobotoBlack, sans-serif;
-            font-size: 22px;
-        }
+}
+.medicine-logo {
+    padding-top: 10px;
+    padding-right: 85px;
+    &__span {
+        padding-left: 15px;
+        font-family: RobotoBlack, sans-serif;
+        font-size: 22px;
     }
-    .medicine-about__item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-top: 24px;
-        padding-right: 35px;
-        .medicine-about__text {
-            padding-left: 12px;
-            font-family: RobotoItalic, sans-serif;
-            font-size: 16px;
-            color: #8b8d8f;
-            text-align: left;
-        }
+}
+.medicine-about__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 24px;
+    padding-right: 35px;
+    @media(max-width: 425px){
+        padding-right: 0;
     }
+}
+.medicine-about__text {
+    padding-left: 12px;
+    font-family: RobotoItalic, sans-serif;
+    font-size: 16px;
+    color: #8b8d8f;
+    text-align: left;
 }
 @media(max-width: 1200px){
     .header__medicine {
         display: flex;
         justify-content: space-between;
-        .medicine-logo {
-            padding-right: 25px;
-        }
+    }
+    .medicine-logo {
+        padding-right: 25px;
     }
 }
 @media(max-width: 768px){
@@ -42,6 +45,6 @@
 }
 @media(max-width:520px){
     .header__medicine{
-    flex-direction: column;
+        flex-direction: column;
     }
 }

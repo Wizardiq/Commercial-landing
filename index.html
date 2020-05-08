@@ -14,7 +14,7 @@
             <div class="header__medicine">
                     <div class="medicine-logo">
                         <img src="img/logo.png" alt="">
-                        <span>Микоцин</span>
+                        <span class="medicine-logo__span">Микоцин</span>
                     </div>
                     <div class="medicine-about__item">
                         <img src="img/meds-item.png" alt="">
@@ -31,7 +31,7 @@
             </div>
         </div>
     </header>
-    <div class="main-info">
+    <section class="main-info">
         <div class="container">
             <div class="info-left">
                 <h2 class="info-left__title">
@@ -39,27 +39,27 @@
                 </h2>
                 <div class="info-left__items">
                     <div class="info-left__about">
-                        <img src="img/2in1-logo.png" alt="">
+                        <div class="info-left__logo-sm">2в1</div>
                         <div class="info-left__text">Комплекс Микоцин <span class="info-left__text-about">устраняет зуд, неприятный запах</span> и возвращает эстетичный вид</div>
                     </div>
                     <div class="info-left__about">
-                        <img src="img/logo-one.png" alt="">
+                        <div class="info-left__logo-sm">1</div>
                         <div class="info-left__text"><span class="info-left__text-tablets">Таблетки</span> Микоцин <span class="info-left__text-item"> уничтожают все виды грибка</span> на ногтях и коже</div>
                     </div>
                     <div class="info-left__about">
-                        <img src="img/logo-two.png" alt="">
+                        <div class="info-left__logo-sm">2</div>
                         <div class="info-left__text"><span class="info-left__text-gel">Гель</span> Микоцин <span class="info-left__text-repair" >восстанавливает кожу</span> и создает на ней <span class="info-left__text-protect">защитный барьер</span></div>
                     </div>
                 </div>
             </div>
             <div class="info-right">
-                <fieldset class="order">
+                <form class="order">
                     <legend class="info__delivery">
                         <img src="img/delivery-logo.png" alt="">
                         <span class="info__delivery-text">Бесплатно</span>
                     </legend>
                     <h3 class="order__title">
-                        Успейте заказать <br> со скидкой <br> <span>до 10.09.2018</span>
+                        Успейте заказать <br> со скидкой <br> <span class="order__date">до 10.09.2018</span>
                     </h3>
                     <div class="order-price">
                         <div class="order-price__old-price">
@@ -81,24 +81,24 @@
                     </div>
                     <img class="order-price_redirected" src="img/arrow.png" alt="">
                     <img class="order-name-logo" src="img/name.png" alt="">
-                    <input class="order-name" type="text" placeholder="Имя">
+                    <input class="order-name" id="name" name="user__name" type="text" placeholder="Имя" pattern="[А-Яа-я]{8,32}" required title="Кириллица от 8 символов">
                     <img class="order-phone-logo" src="img/phone.png" alt="">
-                    <input class="order-phone" type="text" placeholder="Телефон">
-                    <a href="#" class="order-btn">
-                        Заказать <br> <span> со скидкой</span>
-                    </a>
+                    <input class="order-phone" id="tel" name="user__tel" type="text" placeholder="Телефон" minlength="10" maxlength="13" required pattern="[0-9]{10, 13}" title="Минимум 10 символов">
+                    <button class="order-btn" type="submit">
+                        Заказать <br> <span class="order-btn__text"> со скидкой</span>
+                    </button>
                     <div class="order__remain">
-                        Осталось <span>10</span> упаковок <br> со скидкой
+                        Осталось <span class="order__remain-number">10</span> упаковок <br> со скидкой
                     </div>
                     <div class="order__data">
                         <img src="img/logo-form.png" alt="">
-                       <span> Ваши данные защищены</span>
+                       <span class="order__data-secur"> Ваши данные защищены</span>
                     </div>
-                </fieldset>
+                </form>
             </div>
         </div>
-    </div>
-    <div class="about">
+    </section>
+    <section class="about">
         <div class="container">
             <img class="about__logo" src="img/logo.png" alt="">
             <h2 class="about__title">Грибок – это опасная инфекция</h2>
@@ -131,6 +131,6 @@
                 <span class="about__static-text">Статистика:</span> каждые 60 секунд врачи диагностируют опасные поражения внутренних органов, вызванные грибков, у 1-го пациента
             </fieldset>
         </div>
-    </div>
+    </section>
 </body>
 </html>
