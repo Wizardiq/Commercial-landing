@@ -2,4 +2,4 @@
 
 Just ordinary landing
 
-# wizardiq.github.io/Commercial-landing/
+# Demo: wizardiq.github.io/Commercial-landing/
